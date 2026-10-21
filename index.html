@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>炎帝之源 · 五县共生 | 株洲城市文旅文创 IP</title>
+<meta name="description" content="炎帝之源·五县共生——以炎帝文化为核心，提取株洲五县市区文化特色与地域符号，打造炎炎、茶茶、株宁宁、攸攸、醴醴五位可爱治愈的城市文旅 IP。">
+<link rel="preload" as="image" href="sprite.webp">
+<link rel="icon" href="frame_front.webp">
+<style>
+:root{
+  --paper:#F6EFE1;
+  --paper-2:#FBF7EE;
+  --paper-3:#EFE4D0;
+  --ink:#33261C;
+  --ink-2:#6B5747;
+  --ink-3:#9A8574;
+  --seal:#A8402A;
+  --flame:#E4632A;
+  --flame-2:#F2913F;
+  --gold:#C69A4B;
+  --line:rgba(51,38,28,.13);
+  --line-2:rgba(51,38,28,.07);
+  --shadow:0 18px 50px -22px rgba(74,50,30,.35);
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sprite-size:440px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:84px}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 700px at 78% -8%, #FFF6E4 0%, rgba(255,246,228,0) 62%),
+    radial-gradient(900px 620px at 4% 12%, #F3E7D2 0%, rgba(243,231,210,0) 58%),
+    var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* paper grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,calc(100% - 48px));margin:0 auto;position:relative;z-index:1}
+
+/* ---------------- nav ---------------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;height:64px;z-index:60;
+  display:flex;align-items:center;
+  background:rgba(246,239,225,.78);
+  backdrop-filter:blur(14px) saturate(1.2);
+  border-bottom:1px solid var(--line-2);
+  transition:background .3s,box-shadow .3s;
+}
+.nav.solid{background:rgba(246,239,225,.94);box-shadow:0 10px 30px -24px rgba(74,50,30,.5)}
+.nav .wrap{display:flex;align-items:center;gap:28px;width:min(1200px,calc(100% - 48px))}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.seal{
+  width:34px;height:34px;border-radius:6px;flex:0 0 auto;
+  background:linear-gradient(160deg,#B84A2C,#8E3520);
+  color:#FDF3E2;font-family:var(--serif);font-size:19px;font-weight:700;
+  display:grid;place-items:center;line-height:1;
+  box-shadow:0 6px 16px -8px rgba(168,64,42,.8), inset 0 0 0 1px rgba(255,240,220,.28);
+  letter-spacing:0;
+}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-family:var(--serif);font-size:16px;letter-spacing:.06em;font-weight:700}
+.brand-txt span{font-size:10.5px;letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{
+  padding:0 14px;height:34px;display:inline-flex;align-items:center;border-radius:999px;
+  font-size:13.5px;color:var(--ink-2);letter-spacing:.04em;transition:.22s;
+}
+.nav-links a:hover{color:var(--seal);background:rgba(168,64,42,.07)}
+.nav-cta{
+  height:36px;padding:0 18px;border-radius:999px;display:inline-flex;align-items:center;
+  font-size:13px;letter-spacing:.06em;color:#FFF7EC;
+  background:linear-gradient(150deg,#C2502F,#96361F);
+  box-shadow:0 10px 22px -12px rgba(168,64,42,.9);
+  transition:transform .22s, box-shadow .22s;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 14px 26px -12px rgba(168,64,42,.95)}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:560px){
+  .nav .wrap{gap:12px;width:calc(100% - 28px)}
+  .brand{gap:9px;min-width:0}
+  .brand-txt b{font-size:14.5px;letter-spacing:.02em;white-space:nowrap}
+  .brand-txt span{font-size:9px;letter-spacing:.14em;white-space:nowrap}
+  .seal{width:30px;height:30px;font-size:17px}
+  .nav-cta{height:32px;padding:0 13px;font-size:12px;letter-spacing:.02em;white-space:nowrap;margin-left:auto;flex:0 0 auto}
+}
+
+/* ---------------- hero ---------------- */
+.hero{padding:132px 0 74px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11.5px;letter-spacing:.3em;color:var(--seal);text-transform:uppercase;
+  margin-bottom:22px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--seal);opacity:.55}
+h1{
+  font-family:var(--serif);font-weight:700;margin:0 0 8px;
+  font-size:clamp(38px,4.4vw,62px);line-height:1.12;letter-spacing:.02em;
+  color:#2C2016;
+}
+h1 .dot{color:var(--flame);font-size:.62em;vertical-align:.16em;margin:0 .12em}
+.h1-sub{
+  font-family:var(--serif);font-size:clamp(15px,1.5vw,19px);color:var(--ink-2);
+  letter-spacing:.34em;margin:0 0 26px;
+}
+.lead{
+  font-size:15.5px;line-height:2;color:var(--ink-2);max-width:520px;margin:0 0 34px;
+}
+.lead b{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{
+  height:48px;padding:0 26px;border-radius:999px;display:inline-flex;align-items:center;gap:9px;
+  font-size:14.5px;letter-spacing:.05em;border:1px solid transparent;cursor:pointer;
+  transition:transform .22s, box-shadow .22s, background .22s;
+}
+.btn-primary{
+  color:#FFF8EE;background:linear-gradient(150deg,#CB5731,#9A3A21);
+  box-shadow:0 16px 34px -18px rgba(168,64,42,.95);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 40px -18px rgba(168,64,42,1)}
+.btn-ghost{
+  color:var(--ink);background:rgba(255,255,255,.5);border-color:var(--line);
+}
+.btn-ghost:hover{background:#fff;transform:translateY(-2px)}
+.hero-meta{
+  display:flex;gap:34px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);
+  max-width:520px;
+}
+.hero-meta div{display:flex;flex-direction:column;gap:5px}
+.hero-meta b{font-family:var(--serif);font-size:23px;color:var(--seal);line-height:1}
+.hero-meta span{font-size:11.5px;letter-spacing:.18em;color:var(--ink-3)}
+
+/* stage */
+.stage{
+  position:relative;border-radius:28px;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 50% 8%, #FFFDF6 0%, #FBF3E2 42%, #F2E5CD 100%);
+  border:1px solid rgba(198,154,75,.28);
+  box-shadow:var(--shadow), inset 0 0 0 1px rgba(255,255,255,.6);
+  padding:26px 26px 0;
+  isolation:isolate;
+}
+.stage::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(70% 46% at 50% 102%, rgba(196,152,92,.30), rgba(196,152,92,0) 70%);
+  z-index:0;
+}
+.stage-top{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  position:relative;z-index:3;padding:0 2px;
+}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 12px;border-radius:999px;
+  background:rgba(255,255,255,.72);border:1px solid rgba(198,154,75,.3);
+  font-size:11.5px;letter-spacing:.1em;color:var(--ink-2);
+}
+.chip i{width:6px;height:6px;border-radius:50%;background:var(--flame);box-shadow:0 0 0 3px rgba(228,99,42,.16)}
+.stage-holder{
+  position:relative;z-index:2;display:grid;place-items:center;
+  padding:10px 0 0;min-height:calc(var(--sprite-size) * 337 / 440 + 16px);
+}
+.glow{
+  position:absolute;width:74%;aspect-ratio:1;border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle, rgba(255,214,150,.55) 0%, rgba(255,214,150,0) 68%);
+  transform:translate(-50%,-50%);left:50%;top:46%;
+  transition:left .45s cubic-bezier(.22,.7,.28,1), top .45s cubic-bezier(.22,.7,.28,1);
+}
+.avatar-wrap{
+  position:relative;z-index:2;
+  width:var(--sprite-size);height:calc(var(--sprite-size) * 337 / 440);
+  animation:bob 6.5s ease-in-out infinite;
+}
+.avatar{
+  position:relative;width:100%;height:100%;
+  filter:drop-shadow(0 22px 26px rgba(140,96,52,.22));
+  transform-origin:50% 62%;
+  transform-style:preserve-3d;
+  backface-visibility:visible;
+  will-change:transform;
+}
+/* 双层交叉淡化：两帧之间淡入淡出，消除"跳帧"的顿挫感 */
+.av-layer{
+  position:absolute;inset:0;
+  background-repeat:no-repeat;
+  opacity:0;
+  transition:opacity .16s linear;
+  will-change:background-position,opacity;
+  pointer-events:none;
+}
+.av-layer.on{opacity:1}
+.stage-holder{perspective:900px}
+@keyframes bob{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-6px) scale(1.006)}
+}
+.avatar-inner{display:block;width:100%;height:100%}
+.stage-cap{
+  position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:14px 4px 20px;border-top:1px dashed rgba(198,154,75,.4);margin-top:4px;
+}
+.stage-cap .k{font-size:11.5px;letter-spacing:.16em;color:var(--ink-3)}
+.stage-cap .v{
+  font-family:var(--serif);font-size:13px;color:var(--seal);letter-spacing:.06em;
+  font-variant-numeric:tabular-nums;
+}
+.hint{
+  position:absolute;z-index:4;right:10px;top:6px;
+  display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 14px;border-radius:999px;
+  background:rgba(44,32,22,.82);color:#FFF4E4;font-size:11.5px;letter-spacing:.08em;
+  box-shadow:0 12px 26px -14px rgba(44,32,22,.9);
+  pointer-events:none;opacity:1;transition:opacity .5s, transform .5s;
+}
+.hint.gone{opacity:0;transform:translateY(-6px)}
+.hint svg{width:14px;height:14px;stroke:#FFD9A8;fill:none;stroke-width:1.6}
+@media(max-width:980px){
+  .hero{padding:110px 0 50px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  :root{--sprite-size:340px}
+  .hero-meta{max-width:none}
+}
+@media(max-width:560px){
+  :root{--sprite-size:268px}
+  .wrap{width:calc(100% - 32px)}
+  .stage{padding:18px 16px 0;border-radius:22px}
+  .hint{display:none}
+  .stage-top{flex-wrap:wrap;gap:7px}
+  .chip{height:26px;padding:0 10px;font-size:10.5px;letter-spacing:.04em;white-space:nowrap}
+}
+
+/* ---------------- prologue band ---------------- */
+.prologue{
+  padding:0;position:relative;overflow:hidden;
+  background:
+    radial-gradient(90% 120% at 12% 0%, rgba(201,162,78,.18), rgba(201,162,78,0) 58%),
+    radial-gradient(70% 100% at 92% 100%, rgba(228,99,42,.16), rgba(228,99,42,0) 62%),
+    linear-gradient(158deg,#241A13,#31241A 52%,#3B2C1F);
+  color:#EFE2CD;
+  border-top:1px solid rgba(201,162,78,.22);
+  border-bottom:1px solid rgba(201,162,78,.22);
+}
+.prologue::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+}
+.prologue .wrap{
+  display:grid;grid-template-columns:auto 1fr;gap:38px;align-items:center;
+  padding:52px 0;
+}
+.pl-mark{
+  width:64px;height:64px;border-radius:8px;flex:0 0 auto;
+  display:grid;place-items:center;
+  font-family:var(--serif);font-size:32px;font-weight:700;color:#FBEED8;
+  background:linear-gradient(160deg,#B8492B,#8B331E);
+  box-shadow:0 14px 30px -16px rgba(0,0,0,.9), inset 0 0 0 1px rgba(255,240,220,.26);
+}
+.pl-body{min-width:0}
+.pl-text{
+  font-family:var(--serif);font-size:clamp(16px,1.62vw,21px);line-height:1.92;
+  margin:0 0 20px;color:#EDDFC8;letter-spacing:.02em;max-width:920px;
+}
+.pl-text em{font-style:normal;color:#F0B26B}
+.pl-route{
+  display:flex;align-items:center;gap:0;flex-wrap:wrap;
+  font-size:12px;letter-spacing:.24em;color:#B79C74;
+}
+.pl-route span{display:inline-flex;align-items:center}
+.pl-route span::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,rgba(201,162,78,.6),rgba(201,162,78,.18));margin:0 12px}
+.pl-route span:last-child::after{display:none}
+.pl-route b{font-family:var(--serif);font-size:13.5px;letter-spacing:.14em;color:#E8D4B0;font-weight:600;margin-right:7px}
+@media(max-width:760px){
+  .prologue .wrap{grid-template-columns:1fr;gap:20px;padding:38px 0}
+  .pl-mark{width:48px;height:48px;font-size:24px;border-radius:6px}
+  .pl-route{font-size:10.5px;letter-spacing:.16em}
+  .pl-route span::after{width:14px;margin:0 7px}
+}
+
+/* ---------------- section base ---------------- */
+section{padding:86px 0;position:relative}
+.sec-head{max-width:760px;margin:0 auto 52px;text-align:center}
+.sec-kicker{
+  display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.32em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:16px;
+}
+.sec-kicker::before,.sec-kicker::after{content:"";width:20px;height:1px;background:currentColor;opacity:.6}
+h2{
+  font-family:var(--serif);font-weight:700;margin:0 0 14px;
+  font-size:clamp(26px,3vw,40px);line-height:1.24;letter-spacing:.03em;color:#2C2016;
+}
+.sec-desc{font-size:14.5px;line-height:1.95;color:var(--ink-2);margin:0}
+
+/* ---------------- characters ---------------- */
+.chars{background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,0) 40%)}
+.char-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.char-card{
+  position:relative;border-radius:20px;padding:18px 16px 20px;text-align:center;
+  background:linear-gradient(180deg,#FFFDF8,#FBF4E6);
+  border:1px solid rgba(198,154,75,.26);
+  box-shadow:0 14px 34px -26px rgba(74,50,30,.5);
+  transition:transform .32s cubic-bezier(.22,.7,.28,1), box-shadow .32s, border-color .32s;
+  cursor:pointer;overflow:hidden;
+}
+.char-card::before{
+  content:"";position:absolute;inset:0;opacity:0;transition:opacity .32s;
+  background:radial-gradient(80% 60% at 50% 0%, var(--c-soft), rgba(255,255,255,0) 72%);
+}
+.char-card:hover{transform:translateY(-6px);box-shadow:0 26px 48px -28px rgba(74,50,30,.6);border-color:rgba(198,154,75,.55)}
+.char-card:hover::before{opacity:1}
+.char-img{
+  position:relative;z-index:1;width:100%;aspect-ratio:1;display:grid;place-items:center;
+  border-radius:14px;overflow:hidden;
+  background:radial-gradient(72% 66% at 50% 46%, #FFFDF7 0%, #FBF2DF 58%, #F3E6CB 100%);
+}
+.char-img img{width:88%;height:88%;object-fit:contain;transition:transform .4s cubic-bezier(.22,.7,.28,1);
+  filter:drop-shadow(0 10px 14px rgba(140,96,52,.16))}
+.char-card:hover .char-img img{transform:scale(1.06)}
+.char-name{
+  position:relative;z-index:1;font-family:var(--serif);font-size:20px;font-weight:700;
+  margin:14px 0 4px;letter-spacing:.08em;color:#2C2016;
+}
+.char-place{
+  position:relative;z-index:1;font-size:11.5px;letter-spacing:.22em;color:var(--ink-3);
+}
+.char-tag{
+  position:relative;z-index:1;display:inline-flex;margin-top:12px;height:24px;align-items:center;
+  padding:0 11px;border-radius:999px;font-size:11px;letter-spacing:.08em;
+  color:var(--c);background:var(--c-soft);border:1px solid var(--c-line);
+}
+@media(max-width:1000px){.char-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.char-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+
+/* ---------------- profile ---------------- */
+.profile{
+  border-radius:26px;overflow:hidden;
+  background:linear-gradient(160deg,#FFFDF8 0%,#FAF2E2 60%,#F4E8D2 100%);
+  border:1px solid rgba(198,154,75,.28);
+  box-shadow:var(--shadow);
+}
+.tabs{display:flex;gap:6px;padding:14px 16px 0;flex-wrap:wrap}
+.tab{
+  height:38px;padding:0 18px;border-radius:999px;border:1px solid transparent;
+  background:transparent;cursor:pointer;font-family:var(--sans);
+  font-size:13.5px;letter-spacing:.08em;color:var(--ink-2);transition:.24s;
+}
+.tab:hover{background:rgba(255,255,255,.6)}
+.tab.on{
+  background:#2C2016;color:#FFF5E6;box-shadow:0 10px 22px -14px rgba(44,32,22,.9);
+}
+.profile-body{display:grid;grid-template-columns:.82fr 1.18fr;gap:40px;padding:34px 40px 44px}
+.profile-visual{
+  position:relative;border-radius:18px;overflow:hidden;display:grid;place-items:center;
+  background:radial-gradient(74% 74% at 50% 46%, #FFFDF7 0%, #FBF2DF 62%, var(--c-soft) 100%);
+  border:1px solid var(--c-line);min-height:360px;
+}
+.profile-visual img{width:86%;height:86%;object-fit:contain;transition:opacity .3s;
+  filter:drop-shadow(0 16px 22px rgba(140,96,52,.16))}
+.profile-info h3{
+  font-family:var(--serif);font-size:30px;margin:2px 0 6px;letter-spacing:.08em;color:#2C2016;
+}
+.profile-sub{font-size:12px;letter-spacing:.24em;color:var(--c);margin:0 0 22px}
+.facts{display:flex;flex-direction:column;gap:16px}
+.fact{display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:start}
+.fact dt{
+  font-family:var(--serif);font-size:12px;letter-spacing:.14em;color:#FFF6E8;
+  background:var(--c);border-radius:6px;height:24px;display:flex;align-items:center;justify-content:center;
+  margin-top:2px;
+}
+.fact dd{margin:0;font-size:14px;line-height:1.92;color:var(--ink-2)}
+.specs{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:8px 18px;
+  margin:18px 0 0;padding:16px 18px;border-radius:14px;
+  background:linear-gradient(180deg,rgba(198,154,75,.10),rgba(198,154,75,.04));
+  border:1px solid rgba(198,154,75,.22);
+}
+.spec{display:flex;gap:8px;align-items:baseline}
+.spec dt{
+  flex:0 0 auto;font-family:var(--serif);font-size:12px;letter-spacing:.1em;color:var(--c);
+  font-weight:700;
+}
+.spec dt::after{content:"·";margin-left:4px;opacity:.5}
+.spec dd{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink)}
+@media(max-width:900px){
+  .profile-body{grid-template-columns:1fr;gap:26px;padding:24px 22px 32px}
+  .profile-visual{min-height:260px}
+  .profile-info h3{font-size:24px}
+}
+
+/* ---------------- elements ---------------- */
+.elements{background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.4) 50%,rgba(255,255,255,0))}
+.el-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.el{
+  border-radius:18px;padding:24px 20px;background:rgba(255,253,247,.8);
+  border:1px solid rgba(198,154,75,.24);text-align:center;
+  transition:transform .3s,box-shadow .3s;
+}
+.el:hover{transform:translateY(-4px);box-shadow:0 20px 40px -30px rgba(74,50,30,.6)}
+.el-ico{
+  width:100%;aspect-ratio:1/1;margin:0 auto 14px;border-radius:14px;overflow:hidden;
+  background:radial-gradient(74% 74% at 50% 46%,rgba(255,253,247,.9) 0%,rgba(250,240,222,.55) 55%,rgba(246,233,210,0) 100%);
+  display:grid;place-items:center;padding:6% 8%;
+}
+.el-ico img{
+  width:100%;height:100%;object-fit:contain;display:block;
+  filter:drop-shadow(0 8px 12px rgba(140,96,52,.18));
+  transition:transform .42s cubic-bezier(.22,.7,.28,1);
+}
+.el:hover .el-ico img{transform:scale(1.07) rotate(-1.5deg)}
+.el b{display:block;font-family:var(--serif);font-size:16px;letter-spacing:.08em;margin-bottom:6px}
+.el span{font-size:12.5px;line-height:1.8;color:var(--ink-3)}
+@media(max-width:1000px){.el-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.el-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* secondary element strip */
+.el-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
+.el-mini{
+  display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;
+  padding:10px 13px 10px 10px;border-radius:14px;
+  background:rgba(255,253,248,.7);border:1px solid rgba(198,154,75,.2);
+  transition:background .3s,border-color .3s,transform .3s;
+}
+.el-mini:hover{background:#FFFDF8;border-color:rgba(198,154,75,.44);transform:translateY(-3px)}
+.el-mini-img{
+  width:52px;height:52px;border-radius:10px;overflow:hidden;
+  background:radial-gradient(70% 70% at 50% 45%,#FFFDF7,#F3E7D2);
+  border:1px solid rgba(198,154,75,.16);
+}
+.el-mini-img img{width:100%;height:100%;object-fit:contain;display:block}
+.el-mini b{display:block;font-family:var(--serif);font-size:13.5px;letter-spacing:.08em;color:#33261C;line-height:1.3}
+.el-mini span{display:block;font-size:10px;letter-spacing:.14em;color:var(--ink-3);margin-top:3px}
+@media(max-width:1000px){.el-strip{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.el-strip{grid-template-columns:repeat(2,1fr);gap:11px}};
+
+/* palette */
+.pal{margin-top:34px;padding:22px 24px 24px;border-radius:18px;background:rgba(255,253,248,.62);border:1px solid rgba(198,154,75,.22)}
+.pal-head{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;margin-bottom:18px}
+.pal-head b{font-family:var(--serif);font-size:16px;letter-spacing:.1em;color:#2C2016}
+.pal-head em{font-style:normal;font-size:10px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.pal-head i{flex:1;height:1px;min-width:20px;background:linear-gradient(90deg,rgba(198,154,75,.45),rgba(198,154,75,0))}
+.pal-head span{font-size:12px;letter-spacing:.05em;color:var(--ink-2)}
+.pal-row{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
+.sw{border-radius:13px;overflow:hidden;border:1px solid rgba(120,90,55,.14);background:#FFFDF8;transition:transform .3s,box-shadow .3s}
+.sw:hover{transform:translateY(-5px);box-shadow:0 22px 38px -28px rgba(74,50,30,.66)}
+.sw-chip{height:74px}
+.sw-meta{padding:9px 10px 10px}
+.sw-meta b{display:block;font-family:var(--serif);font-size:12px;letter-spacing:.06em;color:#33261C}
+.sw-meta span{display:block;font-size:10px;letter-spacing:.08em;color:var(--ink-3);margin-top:3px;font-variant-numeric:tabular-nums}
+.sw-meta em{display:block;font-style:normal;font-size:9px;letter-spacing:.14em;color:var(--gold);margin-top:2px;text-transform:uppercase}
+@media(max-width:900px){.pal-row{grid-template-columns:repeat(4,1fr)}.sw-chip{height:60px}}
+@media(max-width:560px){
+  .pal{padding:16px 14px 16px;margin-top:26px}
+  .pal-row{grid-template-columns:repeat(4,1fr);gap:9px}
+  .sw-chip{height:46px}
+  .sw-meta{padding:7px 7px 8px}
+  .sw-meta b{font-size:11px}
+  .sw-meta span{font-size:8.5px;letter-spacing:.04em}
+  .sw-meta em{font-size:8px;letter-spacing:.06em}
+  .pal-head{margin-bottom:14px;gap:9px}
+  .pal-head span{font-size:11px}
+}
+
+/* ---------------- showcase (scene / merch) ---------------- */
+.show-block{margin-bottom:26px}
+.show-head{display:flex;align-items:baseline;gap:14px;margin:0 0 16px;flex-wrap:wrap}
+.show-head h3{font-family:var(--serif);font-size:20px;margin:0;letter-spacing:.08em;color:#2C2016}
+.show-head em{font-style:normal;font-size:10.5px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.show-head i{flex:1;height:1px;background:linear-gradient(90deg,rgba(198,154,75,.45),rgba(198,154,75,0))}
+.show-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.show-card{
+  position:relative;border-radius:16px;overflow:hidden;background:#F4E9D5;
+  border:1px solid rgba(198,154,75,.24);box-shadow:0 16px 34px -28px rgba(74,50,30,.6);
+  transition:transform .34s cubic-bezier(.22,.7,.28,1),box-shadow .34s,border-color .34s;
+}
+.show-card:hover{transform:translateY(-6px);box-shadow:0 28px 50px -30px rgba(74,50,30,.62);border-color:rgba(198,154,75,.5)}
+.show-media{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
+  background:radial-gradient(78% 78% at 50% 42%,#FBF2E0,#F0E2C8)}
+.show-media img{width:100%;height:100%;object-fit:contain;display:block;padding:8px;
+  transition:transform .5s cubic-bezier(.22,.7,.28,1)}
+.show-card:hover .show-media img{transform:scale(1.06)}
+.show-media::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(36,26,19,.28),rgba(36,26,19,0) 46%);
+}
+.show-cap{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 12px 10px;
+  font-family:var(--serif);font-size:13px;letter-spacing:.1em;color:#FFF6E7;
+  text-shadow:0 1px 8px rgba(30,20,12,.7);
+}
+.show-no{
+  position:absolute;top:9px;left:10px;z-index:2;
+  font-family:var(--serif);font-size:10px;letter-spacing:.16em;color:#FFF3DE;
+  background:rgba(36,26,19,.42);border:1px solid rgba(255,240,220,.28);
+  padding:2px 7px;border-radius:999px;backdrop-filter:blur(3px);
+}
+@media(max-width:1000px){.show-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.show-row{grid-template-columns:repeat(2,1fr);gap:11px}.show-head h3{font-size:17px}}
+
+/* ---------------- artwork (illustration / poster / culture) ---------------- */
+.art-banner{
+  position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(198,154,75,.3);
+  box-shadow:0 30px 60px -34px rgba(74,50,30,.6);background:#E8DCC4;
+}
+.art-banner img{width:100%;height:auto;display:block}
+.art-banner::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(32,22,14,.5),rgba(32,22,14,0) 42%);
+}
+.art-banner-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 26px 22px}
+.art-banner-cap b{
+  display:block;font-family:var(--serif);font-size:clamp(18px,2.1vw,26px);font-weight:700;
+  letter-spacing:.1em;color:#FFF6E7;text-shadow:0 2px 14px rgba(24,16,10,.6);
+}
+.art-banner-cap span{display:block;font-size:10.5px;letter-spacing:.26em;color:rgba(255,240,222,.82);margin-top:5px;text-transform:uppercase}
+
+.poster-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px;align-items:stretch}
+.poster{
+  display:flex;flex-direction:column;
+  border-radius:16px;overflow:hidden;border:1px solid rgba(198,154,75,.26);
+  background:#F4E9D5;box-shadow:0 20px 44px -30px rgba(74,50,30,.6);
+  transition:transform .34s cubic-bezier(.22,.7,.28,1),box-shadow .34s;
+}
+.poster:hover{transform:translateY(-7px);box-shadow:0 32px 56px -30px rgba(74,50,30,.62)}
+.poster img{width:100%;height:auto;display:block;background:#F7EEDC}
+.poster figcaption{
+  margin-top:auto;padding:12px 14px 14px;font-family:var(--serif);font-size:14px;letter-spacing:.1em;color:#33261C;
+  display:flex;align-items:baseline;gap:9px;
+}
+.poster figcaption em{font-style:normal;font-size:10px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+
+.art-split{display:grid;grid-template-columns:1fr;gap:22px;margin-top:26px}
+.art-panel{
+  border-radius:18px;overflow:hidden;border:1px solid rgba(198,154,75,.24);
+  background:linear-gradient(165deg,#FFFDF8,#F8EEDC);
+}
+.art-panel-head{
+  display:flex;align-items:baseline;gap:10px;padding:16px 20px 12px;
+  border-bottom:1px solid rgba(198,154,75,.18);
+}
+.art-panel-head b{font-family:var(--serif);font-size:16px;letter-spacing:.1em;color:#2C2016}
+.art-panel-head em{font-style:normal;font-size:10px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.art-panel-body{padding:16px 18px 18px}
+.art-panel-body>img{
+  width:100%;display:block;border-radius:10px;background:#F4E9D5;
+  border:1px solid rgba(198,154,75,.18);
+}
+.art-panel.duo .art-panel-body{
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:24px;align-items:center;
+}
+.exp-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.exp-list li{
+  display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:center;
+  padding:9px 13px;border-radius:10px;background:rgba(255,255,255,.68);
+  border:1px solid rgba(198,154,75,.2);
+}
+.exp-list b{font-family:var(--serif);font-size:13.5px;letter-spacing:.06em;color:#33261C}
+.exp-list span{font-size:12px;letter-spacing:.06em;color:var(--ink-2)}
+.art-note{
+  margin:14px 0 0;font-size:12.5px;line-height:1.95;color:var(--ink-2);letter-spacing:.01em;
+  padding:13px 15px;border-radius:11px;background:rgba(255,255,255,.62);
+  border:1px solid rgba(198,154,75,.18);
+}
+@media(max-width:900px){
+  .art-panel.duo .art-panel-body{grid-template-columns:1fr;gap:16px}
+}
+@media(max-width:1000px){.poster-row{gap:14px}}
+@media(max-width:680px){
+  .poster-row{grid-template-columns:1fr}
+  .art-banner-cap{padding:0 16px 16px}
+}
+
+/* ---------------- applications ---------------- */
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.app{
+  position:relative;border-radius:20px;padding:0 0 26px;overflow:hidden;
+  background:linear-gradient(165deg,#FFFDF8,#F8EEDC);
+  border:1px solid rgba(198,154,75,.24);
+  transition:transform .32s,box-shadow .32s;
+}
+.app:hover{transform:translateY(-5px);box-shadow:0 26px 48px -32px rgba(74,50,30,.62)}
+.app-media{
+  position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
+  background:radial-gradient(78% 78% at 50% 42%,#FBF2E0,#F0E2C8);
+  border-bottom:1px solid rgba(198,154,75,.2);
+}
+.app-media img{
+  width:100%;height:100%;object-fit:contain;display:block;padding:10px;
+  transition:transform .5s cubic-bezier(.22,.7,.28,1);
+}
+.app:hover .app-media img{transform:scale(1.05)}
+.app-media::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(36,26,19,.34),rgba(36,26,19,0) 55%);
+}
+.app-no{
+  position:absolute;left:14px;bottom:11px;z-index:2;
+  font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:#FFF3DE;
+  background:rgba(36,26,19,.4);border:1px solid rgba(255,240,220,.28);
+  padding:2px 8px;border-radius:999px;backdrop-filter:blur(3px);
+  margin:0;display:inline-block;
+}
+.app-body{padding:0 24px}
+.app h3{font-family:var(--serif);font-size:19px;margin:18px 0 12px;letter-spacing:.08em}
+.app p{margin:0 0 10px;font-size:13.5px;line-height:1.92;color:var(--ink-2)}
+.app p:last-child{margin-bottom:0}
+.app p b{color:var(--seal);font-weight:600}
+.app::after{
+  content:"";position:absolute;right:-46px;bottom:-46px;width:132px;height:132px;border-radius:50%;
+  background:radial-gradient(circle,rgba(228,99,42,.13),rgba(228,99,42,0) 70%);
+  pointer-events:none;
+}
+@media(max-width:900px){.app-grid{grid-template-columns:1fr}}
+
+/* ---------------- future ---------------- */
+.future{
+  border-radius:26px;padding:52px 46px;
+  background:
+    radial-gradient(120% 140% at 88% 0%, rgba(228,99,42,.13), rgba(228,99,42,0) 55%),
+    linear-gradient(155deg,#2E2118,#3E2C1F 55%,#4A3425);
+  color:#F3E7D6;box-shadow:0 30px 60px -34px rgba(44,32,22,.8);
+  position:relative;overflow:hidden;
+}
+.future::before{
+  content:"";position:absolute;inset:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");
+}
+.future > *{position:relative}
+.future h2{color:#FBF2E2}
+.future .sec-kicker{color:#D9A567}
+.future .sec-desc{color:#CBB79E}
+.fut-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
+.fut{
+  padding:24px 20px;border-radius:16px;background:rgba(255,247,235,.055);
+  border:1px solid rgba(243,231,214,.14);transition:.3s;
+}
+.fut:hover{background:rgba(255,247,235,.1);transform:translateY(-4px);border-color:rgba(243,231,214,.3)}
+.fut b{display:block;font-family:var(--serif);font-size:18px;letter-spacing:.1em;margin-bottom:10px;color:#F8EDDA}
+.fut p{margin:0;font-size:13px;line-height:1.9;color:#BCA991}
+@media(max-width:900px){.future{padding:36px 22px}.fut-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.fut-grid{grid-template-columns:1fr}}
+
+/* ---------------- board ---------------- */
+.board{
+  display:grid;grid-template-columns:440px 1fr;gap:56px;align-items:start;
+}
+.board-img{
+  border-radius:20px;overflow:hidden;border:1px solid rgba(198,154,75,.3);
+  box-shadow:var(--shadow);width:100%;position:sticky;top:96px;cursor:zoom-in;
+  background:#F3E9D7;
+}
+.board-img img{
+  width:100%;height:auto;display:block;
+  transition:transform .5s cubic-bezier(.22,.7,.28,1);
+}
+.board-img:hover img{transform:scale(1.015)}
+.board-img::after{
+  content:"点击查看完整长图";position:absolute;left:0;right:0;bottom:0;
+  padding:26px 16px 12px;font-size:11.5px;letter-spacing:.14em;color:#FFF3DE;text-align:center;
+  background:linear-gradient(to top,rgba(36,26,19,.82),rgba(36,26,19,0));
+  opacity:0;transition:opacity .35s;
+}
+.board-img:hover::after{opacity:1}
+@media(max-width:980px){
+  .board{grid-template-columns:1fr;gap:30px}
+  .board-img{position:static;max-width:420px;margin:0 auto}
+}
+
+/* board index list */
+.bd-list{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 22px}
+.bd-list li{
+  display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:baseline;
+  padding:10px 0;border-bottom:1px dashed rgba(51,38,28,.1);
+}
+.bd-list i{
+  font-family:var(--serif);font-style:normal;font-size:11.5px;color:var(--gold);
+  letter-spacing:.06em;font-variant-numeric:tabular-nums;
+}
+.bd-list b{
+  display:block;font-family:var(--serif);font-size:14.5px;font-weight:600;
+  color:#2C2016;letter-spacing:.06em;line-height:1.5;
+}
+.bd-list span{display:block;font-size:11.5px;color:var(--ink-3);letter-spacing:.1em;margin-top:1px}
+@media(max-width:1100px){.bd-list{grid-template-columns:1fr}}
+
+/* lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:200;display:none;
+  background:rgba(24,17,12,.9);backdrop-filter:blur(6px);
+  padding:36px 24px;overflow:auto;
+}
+.lightbox.on{display:block}
+.lightbox img{
+  width:min(880px,100%);height:auto;margin:0 auto;border-radius:12px;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.9);
+}
+.lb-close{
+  position:fixed;top:20px;right:24px;width:42px;height:42px;border-radius:50%;
+  border:1px solid rgba(255,240,220,.3);background:rgba(255,247,235,.1);color:#FFF3DE;
+  font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;
+}
+.lb-close:hover{background:rgba(255,247,235,.2)}
+@media(max-width:900px){.board-img{max-height:none}}
+
+/* ---------------- calibration ---------------- */
+.calib{margin-top:20px}
+details.cal{
+  border-radius:18px;border:1px solid rgba(198,154,75,.3);
+  background:rgba(255,253,247,.75);padding:0 22px;
+}
+details.cal summary{
+  cursor:pointer;list-style:none;padding:18px 0;font-family:var(--serif);font-size:15px;
+  letter-spacing:.08em;color:var(--seal);display:flex;align-items:center;gap:10px;
+}
+details.cal summary::-webkit-details-marker{display:none}
+details.cal summary::after{content:"＋";margin-left:auto;color:var(--gold);font-size:14px}
+details.cal[open] summary::after{content:"－"}
+.cal-body{padding:0 0 22px;border-top:1px dashed var(--line);margin-top:-2px;padding-top:18px}
+.cal-body p{font-size:13px;line-height:1.95;color:var(--ink-2);margin:0 0 12px}
+.cal-body code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+  background:rgba(198,154,75,.15);padding:1px 6px;border-radius:4px;color:#6B4A22;
+}
+.keys{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.key{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;
+  padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.9);
+  border:1px solid var(--line);color:var(--ink-2);white-space:nowrap;
+}
+.key b{color:var(--seal);font-weight:600}
+.key.front{background:#2C2016;color:#FFEFD6;border-color:#2C2016}
+.key.front b{color:#FFC98A}
+
+/* ---------------- footer ---------------- */
+footer{
+  background:#241A13;color:#B9A78F;padding:56px 0 34px;margin-top:20px;
+  border-top:1px solid rgba(198,154,75,.2);
+}
+.f-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+.f-brand{display:flex;gap:14px;align-items:flex-start}
+.f-brand .seal{width:38px;height:38px;font-size:21px}
+.f-brand b{font-family:var(--serif);font-size:17px;color:#F5EADA;letter-spacing:.1em;display:block;margin-bottom:6px}
+.f-brand p{margin:0;font-size:12.5px;line-height:1.9;color:#9A8873;max-width:320px}
+.f-nav{display:flex;gap:8px;flex-wrap:wrap}
+.f-nav a{
+  height:36px;padding:0 15px;border-radius:999px;display:inline-flex;align-items:center;
+  font-size:13px;color:#CBB79E;border:1px solid rgba(243,231,214,.14);transition:.22s;
+}
+.f-nav a:hover{color:#FFF3E0;border-color:rgba(243,231,214,.4);background:rgba(255,247,235,.06)}
+.f-bot{
+  margin-top:40px;padding-top:22px;border-top:1px solid rgba(243,231,214,.12);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12px;color:#8A7864;letter-spacing:.05em;
+}
+
+/* reveal（渐进增强：无 JS 时内容始终可见） */
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.7,.28,1),transform .8s cubic-bezier(.22,.7,.28,1)}
+html.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .avatar{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="seal">炎</span>
+      <span class="brand-txt">
+        <b>炎帝之源 · 五县共生</b>
+        <span>Zhuzhou Culture IP</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#chars">五县角色</a>
+      <a href="#profile">IP 设定</a>
+      <a href="#elements">元素提取</a>
+      <a href="#artwork">插画海报</a>
+      <a href="#apps">应用延展</a>
+      <a href="#future">未来规划</a>
+    </nav>
+    <a class="nav-cta" href="#chars">认识五位角色</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy rv">
+        <span class="eyebrow">Zhuzhou · Hunan</span>
+        <h1>炎帝之源<span class="dot">·</span>五县共生</h1>
+        <p class="h1-sub">溯 源 炎 帝 故 土</p>
+        <p class="lead">
+          以炎帝文化为核心，提取株洲五县市区的文化特色与地域符号，打造
+          <b>炎炎、茶茶、株宁宁、攸攸、醴醴</b> 五位可爱治愈、具地域识别度的 IP 形象，
+          形成可延展、可传播、可商业化的城市文旅 IP 矩阵。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#chars">
+            探索五位角色
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#profile">查看 IP 设定</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>5</b><span>县市区角色</span></div>
+          <div><b>1</b><span>炎帝文化内核</span></div>
+          <div><b>5</b><span>文创应用方向</span></div>
+        </div>
+      </div>
+
+      <div class="stage rv">
+        <div class="stage-top">
+          <span class="chip"><i></i>株宁宁 · 炎帝文化传承使者</span>
+        </div>
+        <div class="stage-holder" id="holder">
+          <div class="glow" id="glow"></div>
+          <div class="avatar-wrap" id="avatarWrap">
+            <div class="avatar" id="avatar" role="img" aria-label="株宁宁：白发橙衣、手持耒耜的炎帝文化 IP 角色，会跟随鼠标方向转头">
+              <div class="av-layer" id="avA"></div>
+              <div class="av-layer" id="avB"></div>
+            </div>
+          </div>
+          <div class="hint" id="hint">
+            <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg>
+            移动鼠标，她会看向你
+          </div>
+        </div>
+        <div class="stage-cap">
+          <span class="k">当前朝向</span>
+          <span class="v" id="readout">正面 · −0.3° · F01</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROLOGUE ================= -->
+  <section class="prologue">
+    <div class="wrap">
+      <div class="pl-mark">炎</div>
+      <div class="pl-body">
+        <p class="pl-text">
+          株洲五县，同饮一脉炎帝香火。炎陵的黄桃、茶陵的茶叶、攸县的米粉、醴陵的陶瓷，
+          与市区的炎帝传说一道，被收进 <em>同一条视觉语言</em> 里——圆润的形体、温润的材质、
+          统一的眼神，让五个角色站在一起时，自然成为一家人。
+        </p>
+        <div class="pl-route">
+          <span><b>炎陵</b>黄桃</span>
+          <span><b>茶陵</b>茶叶</span>
+          <span><b>株洲</b>炎帝</span>
+          <span><b>攸县</b>米粉</span>
+          <span><b>醴陵</b>陶瓷</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHARACTERS ================= -->
+  <section class="chars" id="chars">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-kicker">Character Profiles</span>
+        <h2>五县共生 · 五位角色</h2>
+        <p class="sec-desc">每个角色对应株洲一处属地，属地的人文基因与物产符号被提炼成头饰、服饰与手持道具，让每一套形象都带着无法替代的地域辨识度。</p>
+      </div>
+      <div class="char-grid" id="charGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= PROFILE ================= -->
+  <section id="profile">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-kicker">IP Character Profiling</span>
+        <h2>角色设定</h2>
+        <p class="sec-desc">从地域文化溯源，到性格特质与视觉符号，再到角色在传播链条中的定位——点击名字切换角色。</p>
+      </div>
+      <div class="profile rv">
+        <div class="tabs" id="tabs"></div>
+        <div class="profile-body" id="profileBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ELEMENTS ================= -->
+  <section class="elements" id="elements">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-kicker">Element Extraction</span>
+        <h2>五县元素提取</h2>
+        <p class="sec-desc">黄桃、茶叶、火焰、米粉、陶瓷——五组具象物象被拆解重组，成为角色头饰、裙装纹样与手持道具的设计依据。</p>
+      </div>
+      <div class="el-grid" id="elGrid"></div>
+      <div class="el-strip" id="elStrip"></div>
+
+      <div class="pal rv">
+        <div class="pal-head">
+          <b>色彩体系</b>
+          <em>Color System</em>
+          <i></i>
+          <span>七个取自设计原稿的主色，构成整套 IP 的统一视觉语言。</span>
+        </div>
+        <div class="pal-row" id="palRow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARTWORK ================= -->
+  <section id="artwork" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-kicker">Illustration · Poster · Context</span>
+        <h2>插画、海报与文化脉络</h2>
+        <p class="sec-desc">五个角色第一次同框出现在同一张长卷里：炎帝像、古建、云纹与烟花构成背景，五县物产被安放在他们手中与脚下。</p>
+      </div>
+
+      <div class="art-banner rv">
+        <img src="assets/art-illustration.webp" alt="炎帝之源·五县共生 插画主视觉" loading="lazy">
+        <div class="art-banner-cap">
+          <b>五县共生 · 插画主视觉</b>
+          <span>Illustration Design</span>
+        </div>
+      </div>
+
+      <div class="poster-row rv">
+        <figure class="poster">
+          <img src="assets/poster-1.webp" alt="海报 炎帝之源" loading="lazy">
+          <figcaption>炎帝之源 <em>Poster 01</em></figcaption>
+        </figure>
+        <figure class="poster">
+          <img src="assets/poster-2.webp" alt="海报 五县共生" loading="lazy">
+          <figcaption>五县共生 <em>Poster 02</em></figcaption>
+        </figure>
+        <figure class="poster">
+          <img src="assets/poster-3.webp" alt="海报 株洲味道" loading="lazy">
+          <figcaption>株洲味道 <em>Poster 03</em></figcaption>
+        </figure>
+      </div>
+
+      <div class="art-split rv">
+        <div class="art-panel duo">
+          <div class="art-panel-head"><b>表情设计</b><em>Expression Design</em></div>
+          <div class="art-panel-body">
+            <img src="assets/art-expression.webp" alt="五角色表情设计" loading="lazy">
+            <ul class="exp-list">
+              <li><b>株宁宁</b><span>开心 · 大笑</span></li>
+              <li><b>炎炎</b><span>wink · 俏皮</span></li>
+              <li><b>茶茶</b><span>惊讶 · 张嘴</span></li>
+              <li><b>攸攸</b><span>兴奋 · 星星眼</span></li>
+              <li><b>醴醴</b><span>哭泣 · 含泪</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="art-panel">
+          <div class="art-panel-head"><b>文化脉络</b><em>Cultural Context</em></div>
+          <div class="art-panel-body">
+            <img src="assets/art-culture.webp" alt="文化脉络五段序列" loading="lazy">
+            <p class="art-note">从炎帝农耕文化的起源，到五县非遗的在地传承，再到饮食、物产与工艺构成的生活记忆，最终以年轻化、可传播的 IP 语言重新表达，并延伸为商业化、品牌化的文创体系。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SCENES ================= -->
+  <section id="scenes" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-kicker">Scene Design</span>
+        <h2>场景延展</h2>
+        <p class="sec-desc">从展馆装置到城市地标，从地铁灯箱到夜间灯光秀——IP 走出平面，成为可以走进去的城市场景。</p>
+      </div>
+      <div class="show-block rv">
+        <div class="show-head"><h3>五处线下场景</h3><em>Scene</em><i></i></div>
+        <div class="show-row" id="sceneRow"></div>
+      </div>
+      <div class="show-block rv">
+        <div class="show-head"><h3>五条周边产品线</h3><em>Collab Merch</em><i></i></div>
+        <div class="show-row" id="merchRow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPLICATIONS ================= -->
+  <section id="apps">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="sec-kicker">Scenario Use &amp; Visual Extension</span>
+        <h2>应用与延展</h2>
+        <p class="sec-desc">让 IP 走出设计稿，进入大众日常生活——从味觉、收藏到陪伴，五个方向构成完整的文创落地路径。</p>
+      </div>
+      <div class="app-grid" id="appGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= BOARD ================= -->
+  <section>
+    <div class="wrap">
+      <div class="board">
+        <div class="board-img rv" id="boardImg">
+          <img src="assets/board.webp" alt="炎帝之源·五县共生 IP 设计总览板">
+        </div>
+        <div class="rv">
+          <span class="sec-kicker">Design Overview</span>
+          <h2>一张图看懂整套 IP</h2>
+          <p class="sec-desc" style="margin-bottom:22px">
+            从角色设定、元素提取、色彩体系，到表情包、海报、插画与衍生品，整套设计围绕同一个文化内核展开，
+            在统一视觉语言下保留五个角色各自的气质差异。
+          </p>
+          <div class="facts" style="gap:14px">
+            <div class="fact" style="grid-template-columns:96px 1fr">
+              <dt style="background:#A8402A">色彩体系</dt>
+              <dd>宣纸米黄为底，赭石与火焰橙作强调，五角色各持主色：黄桃暖橙、抹茶青绿、火焰橙红、奶油米白、青瓷釉绿。</dd>
+            </div>
+            <div class="fact" style="grid-template-columns:96px 1fr">
+              <dt style="background:#7C8A5A">视觉语言</dt>
+              <dd>圆润饱满的形体、温润的绒感与釉面质感、统一的眼部与腮红处理，让五个角色站在一起时自然成为一家人。</dd>
+            </div>
+            <div class="fact" style="grid-template-columns:96px 1fr">
+              <dt style="background:#B8863A">延展能力</dt>
+              <dd>三视图规范、表情库、纹样库与配色规范齐备，可快速延展至联名物料、盲盒、手办与数字内容。</dd>
+            </div>
+          </div>
+          <ol class="bd-list">
+            <li><i>01</i><div><b>设计说明</b><span>Design Statement</span></div></li>
+            <li><i>02</i><div><b>元素提取</b><span>Element Extraction</span></div></li>
+            <li><i>03</i><div><b>角色档案</b><span>Character Profile</span></div></li>
+            <li><i>04</i><div><b>表情设计</b><span>Expression Design</span></div></li>
+            <li><i>05</i><div><b>插画主视觉</b><span>Illustration Design</span></div></li>
+            <li><i>06</i><div><b>海报设计</b><span>Poster Design</span></div></li>
+            <li><i>07</i><div><b>文化脉络</b><span>Cultural Context</span></div></li>
+            <li><i>08</i><div><b>场景延展</b><span>Scene Design</span></div></li>
+            <li><i>09</i><div><b>周边联名</b><span>Collab Merch</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FUTURE ================= -->
+  <section id="future">
+    <div class="wrap">
+      <div class="future rv">
+        <div style="max-width:640px">
+          <span class="sec-kicker">Future Planning</span>
+          <h2>未来规划</h2>
+          <p class="sec-desc">立足五个 IP 形象独有的性格、外貌特质及其所属地域，萃取属地人文基因与本土风物底蕴，跳出单纯视觉输出的局限。</p>
+        </div>
+        <div class="fut-grid" id="futGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CALIBRATION ================= -->
+  <section style="padding:0 0 80px">
+    <div class="wrap">
+      <div class="calib rv">
+        <details class="cal">
+          <summary>关于「转头」：ANGLE_KEYS 角度校准表（技术说明）</summary>
+          <div class="cal-body">
+            <p>
+              角色的转头动画来自 <code>帧视频.mp4</code> 逐帧抽取：先按 0.125 秒一帧抽出 80 帧，
+              生成 contact sheet 逐格目视核对真实朝向，再用眼睛中点相对头部轮廓中心的偏移量
+              （<code>yawN</code>）量化校准，最终得到下面这张 <b>角度 → 帧号</b> 映射表。
+            </p>
+            <p>
+              之所以<b>不能</b>用 <code>angle / 360 × frames</code> 的线性映射：这段素材只覆盖约
+              −36° ~ +29° 的水平转头，且中间有一段角度平台（F22–F34 维持在 +24° 附近并未继续增大），
+              线性映射会把这些重复角度摊开成假动作。此外素材<b>完全没有抬头/低头的俯仰数据</b>，
+              所以上、下两个方向用最接近正面的帧配合垂直位移与轻微缩放补偿，而不是硬找一个不存在的俯视帧。
+            </p>
+            <p>当前共 <b>34</b> 个校准关键帧（已剔除眨眼帧），下表格式为 <code>#序号 −角度 F原视频帧号</code>，高亮项为正面基准帧。</p>
+            <div class="keys" id="keys"></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <span class="seal">炎</span>
+        <div>
+          <b>炎帝之源 · 五县共生</b>
+          <p>株洲城市文旅文创 IP 设计。以炎帝文化为核心，串联炎陵、茶陵、株洲、攸县、醴陵五地人文与物产。</p>
+        </div>
+      </div>
+      <nav class="f-nav">
+        <a href="#chars">五县角色</a>
+        <a href="#profile">IP 设定</a>
+        <a href="#elements">元素提取</a>
+        <a href="#artwork">插画海报</a>
+        <a href="#apps">应用延展</a>
+        <a href="#future">未来规划</a>
+      </nav>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 炎帝之源 · 五县共生　Zhuzhou Culture IP. All rights reserved.</span>
+      <span>溯 源 炎 帝 故 土 · 探 寻 历 史 底 蕴</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="设计总览长图">
+  <button class="lb-close" id="lbClose" aria-label="关闭">×</button>
+  <img src="assets/board.webp" alt="炎帝之源·五县共生 IP 设计总览长图">
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+/* ==========================================================================
+   1. 精灵图与 ANGLE_KEYS 校准表
+   ========================================================================== */
+const SPRITE = { url: 'sprite.webp', cellW: 440, cellH: 337, cols: 7, rows: 5 };
+
+/* 角度 → 帧号。来源：contact sheet 逐帧目视判读 + yawN 量化校准（见页内技术说明）。
+   顺序严格按角度从小到大排列，index 即精灵图格子序号。 */
+const ANGLE_KEYS = [
+  { deg: -36.0, idx:  0, frame: 63 },
+  { deg: -34.7, idx:  1, frame: 59 },
+  { deg: -33.2, idx:  2, frame: 57 },
+  { deg: -31.8, idx:  3, frame: 56 },
+  { deg: -30.6, idx:  4, frame: 67 },
+  { deg: -29.3, idx:  5, frame: 55 },
+  { deg: -27.7, idx:  6, frame: 54 },
+  { deg: -24.0, idx:  7, frame: 53 },
+  { deg: -22.2, idx:  8, frame: 52 },
+  { deg: -19.6, idx:  9, frame: 51 },
+  { deg: -16.4, idx: 10, frame: 50 },
+  { deg: -12.8, idx: 11, frame: 49 },
+  { deg:  -9.5, idx: 12, frame: 48 },
+  { deg:  -7.3, idx: 13, frame: 72 },
+  { deg:  -5.0, idx: 14, frame: 73 },
+  { deg:  -4.0, idx: 15, frame: 75 },
+  { deg:  -2.5, idx: 16, frame: 45 },
+  { deg:  -1.5, idx: 17, frame:  2 },
+  { deg:  -0.3, idx: 18, frame:  1 },   // 正面基准帧
+  { deg:   1.2, idx: 19, frame: 10 },
+  { deg:   3.8, idx: 20, frame: 11 },
+  { deg:   7.2, idx: 21, frame: 40 },
+  { deg:  10.0, idx: 22, frame: 39 },
+  { deg:  11.5, idx: 23, frame: 13 },
+  { deg:  12.9, idx: 24, frame: 38 },
+  { deg:  14.1, idx: 25, frame: 14 },
+  { deg:  16.2, idx: 26, frame: 15 },
+  { deg:  18.1, idx: 27, frame: 36 },
+  { deg:  20.3, idx: 28, frame: 23 },
+  { deg:  22.1, idx: 29, frame: 35 },
+  { deg:  23.9, idx: 30, frame: 30 },
+  { deg:  25.1, idx: 31, frame: 19 },
+  { deg:  27.1, idx: 32, frame: 20 },
+  { deg:  29.0, idx: 33, frame: 21 }
+];
+const FRONT_IDX = 18;
+
+const MIN_YAW = ANGLE_KEYS[0].deg;                  // -36
+const MAX_YAW = ANGLE_KEYS[ANGLE_KEYS.length - 1].deg; // +29
+
+/* 最近邻查表：只从校准过的真实角度里挑，绝不做线性换算 */
+function nearestKey(deg) {
+  let best = ANGLE_KEYS[0], bd = Infinity;
+  for (const k of ANGLE_KEYS) {
+    const d = Math.abs(k.deg - deg);
+    if (d < bd) { bd = d; best = k; }
+  }
+  return best;
+}
+
+/* ==========================================================================
+   2. 精灵图渲染
+   ========================================================================== */
+const avatar = document.getElementById('avatar');
+const avA = document.getElementById('avA');
+const avB = document.getElementById('avB');
+const glow = document.getElementById('glow');
+const readout = document.getElementById('readout');
+const hint = document.getElementById('hint');
+const holder = document.getElementById('holder');
+
+let scale = 1, curIdx = FRONT_IDX, appliedIdx = -1;
+let frontLayer = avA, backLayer = avB;
+
+function measure() {
+  const box = avatar.getBoundingClientRect();
+  if (!box.width) return;
+  scale = box.width / SPRITE.cellW;
+  const bs = (SPRITE.cols * SPRITE.cellW * scale) + 'px ' + (SPRITE.rows * SPRITE.cellH * scale) + 'px';
+  avA.style.backgroundSize = bs;
+  avB.style.backgroundSize = bs;
+  appliedIdx = -1;
+  paint(curIdx, true);
+}
+
+function posFor(idx) {
+  const col = idx % SPRITE.cols, row = Math.floor(idx / SPRITE.cols);
+  return { x: -col * SPRITE.cellW * scale, y: -row * SPRITE.cellH * scale };
+}
+
+/* 双层交叉淡化：新帧画到背面层 → 淡入 → 角色互换。视觉上是"转过去"而不是"跳过去"。 */
+function paint(idx, immediate) {
+  if (idx === appliedIdx) return;
+  appliedIdx = idx;
+  const p = posFor(idx);
+  const back = backLayer;
+  back.style.backgroundImage = 'url(' + SPRITE.url + ')';
+  back.style.backgroundPosition = p.x + 'px ' + p.y + 'px';
+  if (immediate) {
+    back.style.transition = 'none';
+    frontLayer.classList.remove('on');
+    back.classList.add('on');
+    // 强制回流后再恢复过渡，避免首帧闪烁
+    void back.offsetWidth;
+    back.style.transition = '';
+  } else {
+    back.classList.add('on');
+  }
+  frontLayer.classList.remove('on');
+  const t = frontLayer;
+  frontLayer = backLayer;
+  backLayer = t;
+}
+
+/* ==========================================================================
+   3. 指针 → 角度（含垂直补偿）
+   ========================================================================== */
+const state = { nx: 0, ny: 0, tx: 0, ty: 0 };
+
+/* 上/下没有真实俯仰帧：用位移 + 透视翻转（rotateX）+ 缩放做立体补偿，
+   视觉上读作"仰头看 / 低头看"，而不是硬找一个不存在的俯视帧。 */
+function verticalComp(py) {
+  const ty = py * 26;               // 抬头整体上移，低头下沉
+  const sc = 1 - py * 0.05;         // 抬头略微放大，低头略微缩小
+  const rot = py * 0.7;             // 极轻微左右倾斜
+  const rx = -py * 17;              // 负值=顶面后仰→仰头；正值=顶面下压→低头
+  return { ty, sc, rot, rx };
+}
+
+function tfString(v) {
+  return 'translateY(' + v.ty.toFixed(2) + 'px) rotateX(' + v.rx.toFixed(2) +
+    'deg) rotate(' + v.rot.toFixed(2) + 'deg) scale(' + v.sc.toFixed(4) + ')';
+}
+
+/* 水平转角：左满偏 -36°，右满偏 +29°，两侧都用满校准范围。
+   上下不做水平收敛——上/下由 verticalComp 的立体补偿表达，
+   否则左下 45° 会被压成 -25° 落在稀疏区，看起来像"没跟过去"。 */
+function targetFromPointer(nx, ny) {
+  const maxYaw = nx < 0 ? Math.abs(MIN_YAW) : MAX_YAW;
+  return nx * maxYaw;
+}
+
+let rafId = null, last = 0;
+let idleOn = true, idleT = 0, lastInput = 0;
+let hasPointer = false;   // 用户是否已经用过鼠标/触摸
+const IDLE_AFTER = 2600;
+let curKey = ANGLE_KEYS[FRONT_IDX];
+
+/* 迟滞查表：新帧必须比当前帧明显更接近才换，杜绝在中点上来回抖 */
+function pickKey(deg) {
+  let best = curKey, bd = Math.abs(curKey.deg - deg);
+  for (const k of ANGLE_KEYS) {
+    const d = Math.abs(k.deg - deg);
+    if (d < bd - 0.35) { bd = d; best = k; }
+  }
+  return best;
+}
+
+function tick(now) {
+  const dt = Math.min(64, now - (last || now));
+  last = now;
+
+  /* 空闲张望只在「用户还没碰过鼠标」时出现；一旦有过指针输入，目标就只由指针决定，
+     鼠标停住时她绝不会自己飘走（这是上一版最被诟病的点）。 */
+  let idleX = 0, idleY = 0;
+  const quiet = now - lastInput;
+  if (idleOn && !hasPointer && quiet > IDLE_AFTER) {
+    idleT += dt;
+    const ramp = Math.min(1, (quiet - IDLE_AFTER) / 900);
+    idleX = Math.sin(idleT / 2600) * 0.34 * ramp;
+    idleY = Math.sin(idleT / 3900) * 0.12 * ramp;
+  } else {
+    idleT = 0;
+  }
+
+  const tx = Math.max(-1, Math.min(1, state.tx + idleX));
+  const ty = Math.max(-1, Math.min(1, state.ty + idleY));
+
+  const k = 1 - Math.exp(-dt / 180);   // 时间常数 180ms，跟手但不抖
+  state.nx += (tx - state.nx) * k;
+  state.ny += (ty - state.ny) * k;
+
+  const deg = targetFromPointer(state.nx, state.ny);
+  const key = pickKey(deg);
+  if (key !== curKey) curKey = key;
+  curIdx = key.idx;
+  paint(curIdx);
+
+  const { ty: ty2, sc, rot, rx } = verticalComp(state.ny);
+  avatar.style.transform = tfString({ ty: ty2, sc, rot, rx });
+
+  // 光晕跟随
+  glow.style.left = (50 + state.nx * 20) + '%';
+  glow.style.top = (46 + state.ny * 16) + '%';
+
+  readout.textContent = dirName(state.nx, state.ny) + ' · ' +
+    (key.deg > 0 ? '+' : '') + key.deg.toFixed(1) + '° · F' + String(key.frame).padStart(2, '0');
+
+  rafId = requestAnimationFrame(tick);
+}
+function kick() { if (!rafId) rafId = requestAnimationFrame(tick); }
+
+function dirName(nx, ny) {
+  const ax = Math.abs(nx), ay = Math.abs(ny);
+  /* 竖直方向必须先「真的偏上/偏下」才报俯仰，否则微小的 ny 会把正面误标成俯视 */
+  if (ax < 0.18 && ay < 0.18) return '中心 · 正面';
+  if (ax < 0.26) return ay < 0.18 ? '中心 · 正面' : (ny < 0 ? '上 · 仰望' : '下 · 俯视');
+  if (ay < 0.26) return nx < 0 ? '左' : '右';
+  if (ny < 0) return nx < 0 ? '左上' : '右上';
+  return nx < 0 ? '左下' : '右下';
+}
+
+/* 以「角色自身」为圆心感应：八个方向都能真实到达。
+   半径按「圆心到视口左右/上下边缘的距离」分别取值，鼠标顶到任一条边缘即 ±1（满转角）。
+   注意圆心必须取 holder 而不是 #avatar —— #avatar 带着 rotateX/translateY，
+   拿它自身的 rect 会形成「转头 → 圆心移动 → 转头更多」的反馈漂移。 */
+function refRadius() {
+  const b = holder.getBoundingClientRect();
+  const vw = window.innerWidth || 1;
+  const vh = window.innerHeight || 1;
+  const cx = Math.max(0, Math.min(vw, b.left + b.width / 2));
+  const cy = Math.max(0, Math.min(vh, b.top + b.height / 2));
+  return {
+    rx: Math.min(430, Math.max(100, Math.min(cx, vw - cx))),
+    ry: Math.min(430, Math.max(100, Math.min(cy, vh - cy)))
+  };
+}
+
+function setFromClient(cx, cy) {
+  const b = holder.getBoundingClientRect();
+  const ax = b.left + b.width / 2;
+  const ay = b.top + b.height / 2;
+  const R = refRadius();
+  state.tx = Math.max(-1, Math.min(1, (cx - ax) / R.rx));
+  state.ty = Math.max(-1, Math.min(1, (cy - ay) / R.ry));
+  lastInput = performance.now();
+  hasPointer = true;
+  kick();
+  if (hint) hint.classList.add('gone');
+}
+
+/* 以整页为感应区：鼠标在页面任何位置移动，她都会看向你 */
+window.addEventListener('pointermove', (e) => setFromClient(e.clientX, e.clientY), { passive: true });
+window.addEventListener('pointerleave', () => {
+  if (!hasPointer) return;
+  state.tx = 0; state.ty = 0; lastInput = performance.now(); kick();
+});
+
+/* 触屏：按住拖动 */
+holder.addEventListener('touchmove', (e) => {
+  const t = e.touches[0];
+  if (t) { setFromClient(t.clientX, t.clientY); }
+}, { passive: true });
+
+window.addEventListener('resize', measure);
+
+/* ==========================================================================
+   4. 校验钩子（供本地浏览器逐方向验证）
+   ========================================================================== */
+window.IPProbe = function (nx, ny) {
+  const deg = targetFromPointer(nx, ny);
+  const key = nearestKey(deg);
+  const v = verticalComp(ny);
+  return {
+    nx: +nx.toFixed(2), ny: +ny.toFixed(2),
+    dir: dirName(nx, ny),
+    yaw: +deg.toFixed(1),
+    idx: key.idx,
+    frame: key.frame,
+    col: key.idx % SPRITE.cols,
+    row: Math.floor(key.idx / SPRITE.cols),
+    translateY: +v.ty.toFixed(2),
+    rotateX: +v.rx.toFixed(2),
+    scale: +v.sc.toFixed(3),
+    css: 'background-position: ' +
+      (-(key.idx % SPRITE.cols) * SPRITE.cellW * scale) + 'px ' +
+      (-Math.floor(key.idx / SPRITE.cols) * SPRITE.cellH * scale) + 'px'
+  };
+};
+
+/* 直接把某个方向应用到画面上（跳过平滑），用于截图核对 */
+window.IPIdle = function (on) {
+  idleOn = !!on; lastInput = performance.now();
+  if (idleOn) kick();
+  return idleOn;
+};
+
+/* 实时状态读数（调试用） */
+window.IPState = function () {
+  return {
+    nx: +state.nx.toFixed(3), ny: +state.ny.toFixed(3),
+    tx: +state.tx.toFixed(3), ty: +state.ty.toFixed(3),
+    deg: +targetFromPointer(state.nx, state.ny).toFixed(2),
+    keyDeg: curKey.deg, idx: curKey.idx, frame: curKey.frame,
+    text: readout.textContent
+  };
+};
+
+window.IPSet = function (nx, ny) {
+  idleOn = false;
+  state.tx = nx; state.ty = ny; state.nx = nx; state.ny = ny;
+  lastInput = performance.now();
+  const deg = targetFromPointer(nx, ny);
+  const key = nearestKey(deg);
+  curKey = key;
+  curIdx = key.idx;
+  paint(key.idx, true);
+  const v = verticalComp(ny);
+  avatar.style.transform = tfString(v);
+  glow.style.left = (50 + nx * 20) + '%';
+  glow.style.top = (46 + ny * 16) + '%';
+  readout.textContent = dirName(nx, ny) + ' · ' +
+    (key.deg > 0 ? '+' : '') + key.deg.toFixed(1) + '° · F' + String(key.frame).padStart(2, '0');
+  if (hint) hint.classList.add('gone');
+  return window.IPProbe(nx, ny);
+};
+
+/* ==========================================================================
+   5. 内容渲染
+   ========================================================================== */
+const CHARS = [
+  {
+    name: '炎炎', place: '炎陵', role: '炎陵文化IP', img: 'assets/char-yanling.webp',
+    c: '#C77B22', soft: 'rgba(232,163,61,.16)', line: 'rgba(199,123,34,.28)',
+    tag: '炎陵黄桃文化传承使者',
+    src: '根植炎陵千年果乡，传承炎帝农耕文明记忆。以黄桃精灵身份，串联炎陵生态特色，展现五县共生的自然脉络。',
+    trait: '阳光温暖，兼具自然生机与亲和力，处事热情洋溢且富有感染力。传递炎陵黄桃的甜蜜力量，成为五县共生中的活力使者。',
+    sym: '暖橙色调配色、蜜桃毛绒造型、桃叶发饰、花瓣纹样。视觉符号融合桃叶脉络与蜜桃形态，体现炎陵果乡特色。',
+    pos: '炎陵生态形象代言，承载剧情传播与表情包衍生，助力炎陵黄桃推广与五县文旅联动。',
+    spec: [['身份', '黄桃精灵'], ['地域', '炎陵县'], ['特点', '毛绒果皮质感'], ['象征', '阳光'], ['手上元素', '无'], ['服饰', '桃叶装饰']]
+  },
+  {
+    name: '茶茶', place: '茶陵', role: '茶陵文化IP', img: 'assets/char-chaling.webp',
+    c: '#5F7F44', soft: 'rgba(127,160,90,.18)', line: 'rgba(95,127,68,.28)',
+    tag: '茶陵茶叶文化传承使者',
+    src: '传承茶陵千年茶韵，根植神农故里的茶香记忆。以茶叶精灵身份，融合茶陵茶业文化，展现五县共生的生态脉络。',
+    trait: '清新灵动，兼具自然气息与活力，处事乐观且富有亲和力。传递茶陵茶文化的清新力量，成为五县共生中的生态使者。',
+    sym: '抹茶绿主色调、茶叶脉络头饰、茶罐道具、茶叶形态纹样。视觉符号融合嫩绿枝叶与茶叶脉络，体现茶陵生态特色。',
+    pos: '茶陵生态形象代言，承载剧情传播与表情包衍生，助力茶陵茶业推广与五县文旅联动。',
+    spec: [['身份', '茶叶精灵'], ['地域', '茶陵县'], ['特点', '茶叶造型'], ['象征', '生态，清新'], ['手上元素', '茶篓'], ['服饰', '茶叶点缀']]
+  },
+  {
+    name: '株宁宁', place: '株洲', role: '炎帝文化IP', img: 'assets/char-zhuzhou.webp',
+    c: '#C2502F', soft: 'rgba(228,99,42,.15)', line: 'rgba(194,80,47,.3)',
+    tag: '株洲文旅形象代言',
+    src: '传承炎帝文明火种，扎根株洲市区，承载炎帝文化核心记忆。以炎帝传承者身份连接古今，展现五县共生的文化脉络。',
+    trait: '聪慧灵动，兼具智慧与传承气质，处事沉稳不失热情。作为炎帝文化传承者，传递炎帝文明的温暖与智慧。',
+    sym: '炎火元素发饰、神农仪杖（耒耜）道具、炎帝纹样服饰、暖色调配色。视觉符号融合火焰、云纹等传统文化元素，体现炎帝文化特色。',
+    pos: '炎帝文化传承使者，承载剧情传播与表情包衍生。可作为株洲文旅形象代言，助力炎帝文化推广与五县文旅联动。',
+    spec: [['身份', '炎帝传承者'], ['地域', '株洲市区'], ['特点', '炎火元素'], ['象征', '智慧，传承'], ['手上元素', '神龙权杖'], ['服饰', '神龙纹样']]
+  },
+  {
+    name: '攸攸', place: '攸县', role: '攸县文化IP', img: 'assets/char-youxian.webp',
+    c: '#A98B52', soft: 'rgba(201,184,150,.22)', line: 'rgba(169,139,82,.3)',
+    tag: '攸县米粉文化传承使者',
+    src: '根植攸县千年稻作，传承攸县米粉饮食记忆。以米粉精灵身份，串联攸县风味特色，展现五县共生的美食脉络。',
+    trait: '热情洋溢，兼具美食灵魂与亲和力，处事乐观且富有感染力。传递攸县米粉的美味力量，成为五县共生中的活力使者。',
+    sym: '米白与奶油色调配色、香干米粉头饰、攸县米粉与筷子道具、米粉纹理。视觉符号融合米粉香干形态细节，体现攸县特色美食文化。',
+    pos: '攸县美食形象代言，承载剧情传播与表情包衍生，助力攸县美食推广与五县文旅联动。',
+    spec: [['身份', '米饭小螺蛳'], ['地域', '攸县'], ['特点', '美食拟人化'], ['象征', '美味，热情'], ['手上元素', '米粉碗'], ['服饰', '香干服饰']]
+  },
+  {
+    name: '醴醴', place: '醴陵', role: '醴陵文化IP', img: 'assets/char-liling.webp',
+    c: '#5C8A7B', soft: 'rgba(143,176,160,.2)', line: 'rgba(92,138,123,.3)',
+    tag: '醴陵陶瓷文化传承使者',
+    src: '传承醴陵千年陶瓷文明，承载醴陵陶瓷文化核心记忆。以陶瓷精灵身份连接古今，展现五县共生的匠心传承脉络。',
+    trait: '温婉雅致，兼具匠艺与传承气质，处事沉稳不失灵动。温婉气质中透着对陶瓷艺术的热爱与执着，传递醴陵文化的温暖力量。',
+    sym: '青绿釉色造型、花瓷发饰、缠枝纹样、几何线条纹样。视觉符号融合青花、缠枝等经典陶瓷纹样，体现醴陵陶瓷艺术特色。',
+    pos: '醴陵陶瓷形象代言，承载剧情传播与表情包衍生，助力醴陵陶瓷推广与五县文旅联动。',
+    spec: [['身份', '陶瓷精灵'], ['地域', '醴陵市'], ['特点', '陶瓷釉面质感'], ['象征', '匠心，玻璃'], ['手上元素', '烟花尾'], ['服饰', '青花纹饰']]
+  }
+];
+
+/* ---- 角色卡 ---- */
+const charGrid = document.getElementById('charGrid');
+charGrid.innerHTML = CHARS.map((c, i) => `
+  <article class="char-card rv" style="--c:${c.c};--c-soft:${c.soft};--c-line:${c.line};transition-delay:${i * 70}ms" data-i="${i}">
+    <div class="char-img"><img src="${c.img}" alt="${c.name} · ${c.place}${c.role}" loading="lazy"></div>
+    <div class="char-name">${c.name}</div>
+    <div class="char-place">${c.place}</div>
+    <span class="char-tag">${c.role}</span>
+  </article>`).join('');
+
+charGrid.addEventListener('click', (e) => {
+  const card = e.target.closest('.char-card');
+  if (!card) return;
+  selectChar(+card.dataset.i);
+  document.getElementById('profile').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+/* ---- 角色详情 ---- */
+const tabs = document.getElementById('tabs');
+const body = document.getElementById('profileBody');
+tabs.innerHTML = CHARS.map((c, i) =>
+  `<button class="tab${i === 2 ? ' on' : ''}" data-i="${i}">${c.name}</button>`).join('');
+
+function selectChar(i) {
+  const c = CHARS[i];
+  [...tabs.children].forEach((b, k) => b.classList.toggle('on', k === i));
+  body.style.setProperty('--c', c.c);
+  body.style.setProperty('--c-soft', c.soft);
+  body.style.setProperty('--c-line', c.line);
+  body.innerHTML = `
+    <div class="profile-visual" style="--c:${c.c};--c-soft:${c.soft};--c-line:${c.line}">
+      <img src="${c.img}" alt="${c.name} 三视图正面形象">
+    </div>
+    <div class="profile-info" style="--c:${c.c}">
+      <h3>${c.name}</h3>
+      <p class="profile-sub">${c.place} · ${c.role}</p>
+      <dl class="facts">
+        <div class="fact"><dt>溯源</dt><dd>${c.src}</dd></div>
+        <div class="fact"><dt>性格</dt><dd>${c.trait}</dd></div>
+        <div class="fact"><dt>符号</dt><dd>${c.sym}</dd></div>
+        <div class="fact"><dt>定位</dt><dd>${c.pos}</dd></div>
+      </dl>
+      <dl class="specs">${c.spec.map(([k, v]) => `<div class="spec"><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+    </div>`;
+}
+tabs.addEventListener('click', (e) => {
+  const b = e.target.closest('.tab');
+  if (b) selectChar(+b.dataset.i);
+});
+selectChar(2);
+
+/* ---- 元素提取 ---- */
+const ELS = [
+  { n: '炎陵黄桃', d: '果绒质感 · 桃叶脉络', img: 'assets/el-yanling-peach.webp', c: '#C77B22', soft: 'rgba(232,163,61,.16)', line: 'rgba(199,123,34,.28)' },
+  { n: '茶陵茶叶', d: '嫩芽绿意 · 茶叶脉络', img: 'assets/el-chaling-tea.webp', c: '#5F7F44', soft: 'rgba(127,160,90,.18)', line: 'rgba(95,127,68,.28)' },
+  { n: '炎帝文化', d: '火堆火焰 · 草裙肌理', img: 'assets/el-yan-flame.webp', c: '#C2502F', soft: 'rgba(228,99,42,.15)', line: 'rgba(194,80,47,.3)' },
+  { n: '攸县米粉', d: '豆腐方正 · 稻穗穗芒', img: 'assets/el-youxian-rice.webp', c: '#A98B52', soft: 'rgba(201,184,150,.22)', line: 'rgba(169,139,82,.3)' },
+  { n: '醴陵陶瓷', d: '青绿釉色 · 粉彩花纹', img: 'assets/el-liling-vase.webp', c: '#5C8A7B', soft: 'rgba(143,176,160,.2)', line: 'rgba(92,138,123,.3)' }
+];
+const EL_MINI = [
+  { n: '桃叶', e: 'Peach Leaf', img: 'assets/el-peach-leaf.webp' },
+  { n: '茶篓', e: 'Tea Basket', img: 'assets/el-tea-basket.webp' },
+  { n: '神龙纹样', e: 'Dragon Motif', img: 'assets/el-dragon-seal.webp' },
+  { n: '香干', e: 'Dried Tofu', img: 'assets/el-xianggan.webp' },
+  { n: '烟花', e: 'Firework', img: 'assets/el-firework.webp' }
+];
+document.getElementById('elGrid').innerHTML = ELS.map((e, i) => `
+  <div class="el rv" style="--c:${e.c};--c-soft:${e.soft};--c-line:${e.line};transition-delay:${i * 60}ms">
+    <div class="el-ico"><img src="${e.img}" alt="${e.n}" loading="lazy"></div>
+    <b>${e.n}</b>
+    <span>${e.d}</span>
+  </div>`).join('');
+document.getElementById('elStrip').innerHTML = EL_MINI.map((e, i) => `
+  <div class="el-mini rv" style="transition-delay:${i * 50}ms">
+    <div class="el-mini-img"><img src="${e.img}" alt="${e.n}" loading="lazy"></div>
+    <div><b>${e.n}</b><span>${e.e}</span></div>
+  </div>`).join('');
+
+/* ---- 色彩体系（取自设计原稿色卡） ---- */
+const PAL = [
+  { n: '蜜桃', e: 'Peach', c: '#EAB486' },
+  { n: '抹茶', e: 'Matcha', c: '#A7AC76' },
+  { n: '火焰', e: 'Flame', c: '#E18841' },
+  { n: '青瓷', e: 'Celadon', c: '#B9C5AD' },
+  { n: '米白', e: 'Rice', c: '#EFDDB1' },
+  { n: '赭土', e: 'Ochre', c: '#DDBC93' },
+  { n: '深棕', e: 'Umber', c: '#B99974' }
+];
+document.getElementById('palRow').innerHTML = PAL.map((p, i) => `
+  <div class="sw rv" style="transition-delay:${i * 40}ms">
+    <div class="sw-chip" style="background:${p.c}"></div>
+    <div class="sw-meta"><b>${p.n}</b><span>${p.c}</span><em>${p.e}</em></div>
+  </div>`).join('');
+
+/* ---- 场景延展 / 周边联名 ---- */
+const SCENES = [
+  { t: '文旅展馆 IP 装置', img: 'assets/scene-museum.webp' },
+  { t: '文创商店 · 盲盒吧唧', img: 'assets/scene-shop.webp' },
+  { t: '城市地标雕塑', img: 'assets/scene-statue.webp' },
+  { t: '地铁灯箱广告', img: 'assets/scene-metro.webp' },
+  { t: '夜间灯光秀互动装置', img: 'assets/scene-light.webp' }
+];
+const MERCH = [
+  { t: '数码家居系列', img: 'assets/merch-digital.webp' },
+  { t: '文具潮玩系列', img: 'assets/merch-stationery.webp' },
+  { t: '奶茶联名周边', img: 'assets/merch-tea.webp' },
+  { t: '手办盲盒系列', img: 'assets/merch-blindbox.webp' },
+  { t: '多元综合展示', img: 'assets/merch-mixed.webp' }
+];
+const cardHTML = (list) => list.map((s, i) => `
+  <article class="show-card rv" style="transition-delay:${i * 60}ms">
+    <div class="show-media"><img src="${s.img}" alt="${s.t}" loading="lazy"></div>
+    <span class="show-no">0${i + 1}</span>
+    <span class="show-cap">${s.t}</span>
+  </article>`).join('');
+document.getElementById('sceneRow').innerHTML = cardHTML(SCENES);
+document.getElementById('merchRow').innerHTML = cardHTML(MERCH);
+
+/* ---- 应用延展 ---- */
+const APPS = [
+  { t: '茶饮联名', img: 'assets/merch-tea.webp', a: 'IP 定制饮品研发', b: '结合各角色的性格特质与形象特点，挖掘株洲本地民俗文化内涵，打造与之匹配的专属特调饮品，从味觉层面丰富联名体验。',
+    c: '茶饮联名视觉衍生', d: '把 IP 形象呈现在杯套、杯托等物料之上，依托茶饮品牌既有传播基础，让地域文化以更轻松的形式触达大众。' },
+  { t: '吧唧盲盒', img: 'assets/scene-shop.webp', a: '徽章盲盒衍生', b: '吧唧、卡牌这类圈层周边已成为潮流文创里极受欢迎的品类，对年轻受众而言，它们不只是装饰，更是寄托角色情感、实现同好社交的载体。',
+    c: '收藏趣味设计', d: '依托盲盒的抽选收集特性，打造多款差异化 IP 徽章，借助收藏的趣味性调动探索意愿，在把玩收集的过程中加深对本土 IP 的印象。' },
+  { t: '手办盲盒', img: 'assets/merch-blindbox.webp', a: '潮玩实体衍生', b: '潮玩手办自带收藏、纪念属性，不少地方文旅项目也借助盲盒形式，让地域文化跳出展馆、走入日常。',
+    c: '角色文化实体表达', d: '每一款形象都深度结合 IP 人设与株洲本土民俗元素，通过实体化玩偶把抽象的地域文化内涵具象呈现。' },
+  { t: '陪伴系列', img: 'assets/merch-mixed.webp', a: '陪伴型周边', b: '相比收藏类潮玩，陪伴型文创重在日常接触，依靠温和的角色形象建立情感联结，在少儿受众中拥有广阔的接受空间。',
+    c: '生活场景文化传递', d: '把本地文化内涵转化为柔和的视觉细节植入产品，让 IP 伴随孩子日常生活，在潜移默化中完成文化输出。' },
+  { t: '主题文创', img: 'assets/merch-stationery.webp', a: '主题板块搭建', b: '五个 IP 形象各自对应株洲不同区县，依托角色人设与属地背景，挖掘当地物产资源与民俗风貌，拓展多元化的主题文创产出。',
+    c: '地域符号转译', d: '提炼各区县标志性的城市记忆，把地方特色物产、民俗纹样转化为视觉语言赋予对应角色，让每套文创都带着属地独有的辨识度。' },
+  { t: '数字内容', img: 'assets/scene-light.webp', a: '表情包与短内容', b: '以角色性格为脚本，产出表情包、短动画与社交素材，让 IP 在年轻人的日常对话中自然流动。',
+    c: '线上传播矩阵', d: '配合节点话题与文旅活动，形成可持续更新的内容供给，把一次性的形象发布变成长期的文化陪伴。' }
+];
+document.getElementById('appGrid').innerHTML = APPS.map((p, i) => `
+  <article class="app rv" style="transition-delay:${i * 60}ms">
+    <div class="app-media">
+      <img src="${p.img}" alt="${p.t}" loading="lazy">
+      <span class="app-no">0${i + 1}</span>
+    </div>
+    <div class="app-body">
+      <h3>${p.t}</h3>
+      <p><b>${p.a}</b>　${p.b}</p>
+      <p><b>${p.c}</b>　${p.d}</p>
+    </div>
+  </article>`).join('');
+
+/* ---- 未来规划 ---- */
+const FUT = [
+  { t: '内核深耕', d: '萃取属地人文基因与本土风物底蕴，跳出单纯视觉输出，将地域文化精神赋予整套 IP，夯实长远发展的文化根基。' },
+  { t: '产文共生', d: '把 IP 与地方文旅资源深度结合，以文创软实力赋能属地宣传，让文化传承与地方发展相辅相成。' },
+  { t: '场景拓维', d: '推动 IP 成果走出设计稿，对接城市文旅展示、公共视觉等多元现实场景，拓宽文化触达大众的渠道。' },
+  { t: '破圈传播', d: '搭建线上线下联动的传播体系，依托 IP 人格魅力弱化传统文化的距离感，让本土文化触达更多圈层。' }
+];
+document.getElementById('futGrid').innerHTML = FUT.map(f => `
+  <div class="fut"><b>${f.t}</b><p>${f.d}</p></div>`).join('');
+
+/* ---- 校准表 ---- */
+document.getElementById('keys').innerHTML = ANGLE_KEYS.map(k =>
+  `<span class="key${k.idx === FRONT_IDX ? ' front' : ''}">#${String(k.idx).padStart(2, '0')} <b>${k.deg > 0 ? '+' : ''}${k.deg.toFixed(1)}°</b> F${String(k.frame).padStart(2, '0')}</span>`
+).join('');
+
+/* ==========================================================================
+   6. 滚动效果
+   ========================================================================== */
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => {
+  nav.classList.toggle('solid', scrollY > 12);
+}, { passive: true });
+
+/* 总览长图放大 */
+const lb = document.getElementById('lightbox');
+document.getElementById('boardImg').addEventListener('click', () => {
+  lb.classList.add('on'); document.body.style.overflow = 'hidden';
+});
+function closeLb() { lb.classList.remove('on'); document.body.style.overflow = ''; }
+document.getElementById('lbClose').addEventListener('click', closeLb);
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb.classList.contains('on')) closeLb(); });
+
+/* ==========================================================================
+   7. 启动
+   ========================================================================== */
+function boot() {
+  measure();
+  curIdx = FRONT_IDX;
+  paint(FRONT_IDX, true);
+  readout.textContent = '中心 · 正面 · −0.3° · F01';
+  /* 没人动鼠标时也让她自己轻轻张望，页面一进来就是活的 */
+  lastInput = performance.now();
+  if (idleOn && !matchMedia('(prefers-reduced-motion: reduce)').matches) kick();
+}
+if (document.readyState === 'complete') boot();
+else addEventListener('load', boot);
+/* 图片加载后尺寸可能变化，再量一次 */
+setTimeout(measure, 120);
+setTimeout(measure, 600);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) { lastInput = performance.now(); kick(); }
+});
+</script>
+</body>
+</html>
